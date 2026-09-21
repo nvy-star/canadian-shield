@@ -21,7 +21,7 @@
   --hdrH:74px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:var(--hdrH)}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:var(--hdrH);overflow-x:hidden}
 body{
   margin:0;background:var(--bone);color:var(--navy);
   font-family:'DM Sans',system-ui,sans-serif;font-weight:400;
@@ -366,7 +366,7 @@ footer{background:var(--deep);color:var(--bone);padding:clamp(56px,7vw,96px) var
 
 /* hero on phones: image above the bar */
 @media(max-width:700px){
-  .hero{min-height:0;display:block;overflow:visible}
+  .hero{min-height:0;display:block;overflow:hidden}
   .hero-media{inset:0 0 auto;height:78svh}
   .hero-scrim{inset:0 0 auto;height:78svh}
   .hero-media img{object-position:center center}
