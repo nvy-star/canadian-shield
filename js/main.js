@@ -82,13 +82,16 @@
     if (!stack || !panels.length) return;
     var figs = stack.querySelectorAll('figure');
     var counter = document.getElementById(panels[0].dataset.target);
+    var dotEls = null;
 
     var show = function (i) {
       figs.forEach(function (f) { f.classList.toggle('on', +f.dataset.i === i); });
       if (counter) counter.textContent = '0' + (i + 1);
+      if (dotEls) dotEls.forEach(function (d, j) { d.classList.toggle('on', j === i); });
     };
 
-    if ('IntersectionObserver' in window) {
+    /* scroll-driven crossfade — desktop only */
+    if ('IntersectionObserver' in window && !mqSmall.matches) {
       var pio = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) show(+e.target.dataset.i);
@@ -97,12 +100,36 @@
       panels.forEach(function (p) { pio.observe(p); });
     }
 
-    /* on small screens the image is not pinned, so let taps drive it too */
+    /* tap to advance */
     stack.addEventListener('click', function () {
       var current = 0;
       figs.forEach(function (f, i) { if (f.classList.contains('on')) current = i; });
       show((current + 1) % figs.length);
     });
+
+    /* swipe on mobile */
+    var tx = 0;
+    stack.addEventListener('touchstart', function (e) {
+      tx = e.changedTouches[0].clientX;
+    }, { passive: true });
+    stack.addEventListener('touchend', function (e) {
+      var dx = tx - e.changedTouches[0].clientX;
+      if (Math.abs(dx) < 35) return;
+      var cur = 0;
+      figs.forEach(function (f, i) { if (f.classList.contains('on')) cur = i; });
+      show(dx > 0 ? (cur + 1) % figs.length : (cur - 1 + figs.length) % figs.length);
+    }, { passive: true });
+
+    /* dot indicators */
+    var dotsEl = document.createElement('div');
+    dotsEl.className = 'pin-dots';
+    figs.forEach(function (_, i) {
+      var d = document.createElement('span');
+      if (i === 0) d.classList.add('on');
+      dotsEl.appendChild(d);
+    });
+    stack.parentNode.insertBefore(dotsEl, stack.nextSibling);
+    dotEls = Array.prototype.slice.call(dotsEl.querySelectorAll('span'));
   }
   document.querySelectorAll('.pin').forEach(wirePinned);
 
