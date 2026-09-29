@@ -21,7 +21,7 @@
   --hdrH:74px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:var(--hdrH);overflow-x:hidden}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:var(--hdrH)}
 body{
   margin:0;background:var(--bone);color:var(--navy);
   font-family:'DM Sans',system-ui,sans-serif;font-weight:400;
@@ -389,6 +389,7 @@ footer{background:var(--deep);color:var(--bone);padding:clamp(56px,7vw,96px) var
 .pin-stack.tall{aspect-ratio:3/4;height:min(calc(100svh - var(--hdrH) - 130px), 62vw)}
 .pin-stack.tall{width:auto;max-width:100%;margin-inline:auto}
 @media(max-width:768px){
+  html{overflow-x:hidden}
   .pin-grid{grid-template-columns:1fr}
   /* pinned sections become a swipeable stack on mobile */
   .pin-media{position:static}
