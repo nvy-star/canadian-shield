@@ -181,13 +181,4 @@
     ba.style.setProperty('--x', '48%');
   }
 
-  /* ---------- form ---------- */
-  var form = document.querySelector('.quote-form form');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var b = form.querySelector('button span');
-      if (b) b.textContent = 'Request sent';
-    });
-  }
 })();
