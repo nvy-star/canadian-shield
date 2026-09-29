@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var mqSmall = window.matchMedia('(max-width: 860px)');
+  var mqSmall = window.matchMedia('(max-width: 768px)');
 
   /* ---------- header shadow once scrolled ---------- */
   var hdr = document.getElementById('hdr');
