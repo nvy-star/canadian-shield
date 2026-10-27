@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connect With Us — Canadian Shield Windows &amp; Doors</title>
+<meta name="description" content="Follow Canadian Shield Windows & Doors on Instagram, TikTok and Facebook for project updates, tips and inspiration.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#142336;
+  --deep:#0B1524;
+  --bone:#EDE8DE;
+  --bone-2:#E3DCD0;
+  --stone:#8A8270;
+  --red:#C60F1D;
+  --rule:rgba(20,35,54,.14);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;min-height:100svh;
+  background:var(--bone);color:var(--navy);
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-size:16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  display:flex;flex-direction:column;align-items:center;
+}
+a{color:inherit;text-decoration:none}
+p{margin:0}
+
+/* ---- page wrapper ---- */
+.page{
+  width:100%;max-width:480px;
+  padding:clamp(40px,8svh,80px) clamp(24px,6vw,48px) clamp(32px,6svh,60px);
+  display:flex;flex-direction:column;align-items:center;gap:0;
+  flex:1;
+}
+
+/* ---- logo ---- */
+.logo{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:clamp(36px,6svh,56px)}
+.logo img{width:52px;height:auto}
+.logo-name{text-align:center}
+.logo-name strong{display:block;font-family:'Archivo Black',sans-serif;font-size:13px;letter-spacing:.18em;line-height:1}
+.logo-name small{display:block;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--stone);margin-top:5px}
+
+/* ---- heading ---- */
+.heading{text-align:center;margin-bottom:clamp(8px,2svh,14px)}
+.heading h1{
+  font-family:'Archivo Black',sans-serif;font-weight:400;
+  font-size:clamp(36px,9vw,52px);letter-spacing:-.05em;line-height:.88;
+  text-transform:uppercase;
+}
+.tagline{
+  text-align:center;font-size:14px;color:var(--stone);
+  max-width:28ch;line-height:1.5;
+  margin-bottom:clamp(36px,7svh,56px);
+}
+
+/* ---- social buttons ---- */
+.socials{width:100%;display:flex;flex-direction:column;gap:14px}
+
+.social-btn{
+  display:flex;align-items:center;gap:18px;
+  width:100%;padding:20px 22px;
+  border:1px solid var(--rule);background:transparent;
+  color:var(--navy);text-decoration:none;
+  position:relative;overflow:hidden;isolation:isolate;
+  transition:border-color .35s;
+  -webkit-tap-highlight-color:transparent;
+}
+.social-btn:before{
+  content:"";position:absolute;inset:0;
+  background:var(--navy);
+  transform:translateY(101%);
+  transition:transform .42s cubic-bezier(.2,.8,.2,1);
+}
+.social-btn:hover:before,
+.social-btn:focus-visible:before{transform:translateY(0)}
+.social-btn:hover,
+.social-btn:focus-visible{border-color:var(--navy);color:var(--bone)}
+
+.social-btn svg{width:22px;height:22px;flex:none;position:relative;z-index:2;transition:color .4s}
+.social-btn-label{position:relative;z-index:2;display:flex;flex-direction:column;gap:2px}
+.social-btn-label strong{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;line-height:1;transition:color .4s}
+.social-btn-label span{font-size:12px;opacity:.6;letter-spacing:.04em;transition:color .4s,opacity .4s}
+.social-btn:hover .social-btn-label span,
+.social-btn:focus-visible .social-btn-label span{opacity:.7}
+.social-btn-arrow{margin-left:auto;position:relative;z-index:2;font-size:18px;opacity:.45;transition:opacity .35s,transform .35s,color .4s}
+.social-btn:hover .social-btn-arrow,
+.social-btn:focus-visible .social-btn-arrow{opacity:.9;transform:translate(3px,-3px)}
+
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+
+/* ---- divider ---- */
+.divider{
+  width:100%;margin:clamp(32px,5svh,48px) 0 0;
+  border:0;border-top:1px solid var(--rule);
+}
+
+/* ---- footer ---- */
+.foot{
+  width:100%;max-width:480px;
+  padding:0 clamp(24px,6vw,48px) clamp(28px,5svh,40px);
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+}
+.foot-back{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  color:var(--stone);
+  border-bottom:1px solid transparent;
+  transition:color .35s,border-color .35s;
+  padding-bottom:4px;
+}
+.foot-back:hover{color:var(--navy);border-bottom-color:var(--navy)}
+.foot-copy{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);opacity:.7}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="images/shield.png" alt="Canadian Shield">
+    <div class="logo-name">
+      <strong>CANADIAN SHIELD</strong>
+      <small>Windows &amp; Doors</small>
+    </div>
+  </div>
+
+  <!-- Heading -->
+  <div class="heading">
+    <h1>Connect<br>With Us</h1>
+  </div>
+  <p class="tagline">Follow along for project updates, inspiration and behind-the-scenes work.</p>
+
+  <!-- Social buttons -->
+  <div class="socials">
+
+    <!-- Instagram -->
+    <a class="social-btn" href="https://www.instagram.com/canadianshieldwd/" target="_blank" rel="noopener noreferrer" aria-label="Canadian Shield on Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4.5"/>
+        <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/>
+      </svg>
+      <div class="social-btn-label">
+        <strong>Instagram</strong>
+        <span>@canadianshieldwd</span>
+      </div>
+      <span class="social-btn-arrow" aria-hidden="true">↗</span>
+    </a>
+
+    <!-- TikTok -->
+    <a class="social-btn" href="https://www.tiktok.com/@canadianshieldwd" target="_blank" rel="noopener noreferrer" aria-label="Canadian Shield on TikTok">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.78a4.85 4.85 0 0 1-1.01-.09z"/>
+      </svg>
+      <div class="social-btn-label">
+        <strong>TikTok</strong>
+        <span>@canadianshieldwd</span>
+      </div>
+      <span class="social-btn-arrow" aria-hidden="true">↗</span>
+    </a>
+
+    <!-- Facebook -->
+    <a class="social-btn" href="https://www.facebook.com/p/Canadian-Shield-Windows-Doors-61594885173118/" target="_blank" rel="noopener noreferrer" aria-label="Canadian Shield on Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+      <div class="social-btn-label">
+        <strong>Facebook</strong>
+        <span>Canadian Shield Windows &amp; Doors</span>
+      </div>
+      <span class="social-btn-arrow" aria-hidden="true">↗</span>
+    </a>
+
+  </div>
+
+  <hr class="divider">
+
+</div>
+
+<div class="foot">
+  <a class="foot-back" href="index.html">← Back to website</a>
+  <span class="foot-copy">© 2026 Canadian Shield Windows &amp; Doors</span>
+</div>
+
+</body>
+</html>
